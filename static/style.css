@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #1e40af; /* Deep blue */
+    --secondary-color: #f3f4f6; /* Soft gray */
+    --accent-color: #f59e0b; /* Warm amber */
+    --text-color: #1f2937; /* Dark gray */
+    --highlight-color: #fef3c7; /* Light amber */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--text-color);
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.upload-section {
+    margin: 20px 0;
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.result-section {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: var(--highlight-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.preview-section {
+    margin-top: 20px;
+}
+
+.preview-section h3 {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+.preview-section img {
+    max-width: 300px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.preview-section img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.preview-section img#tumorPreview {
+    border: 2px solid #d81b60;
+}
